@@ -1,0 +1,11 @@
+<p>dummy works!</p>
+<input [type]="typeOfText" />
+<button (click)="view()">click me</button>
+<p *ngIf="true">my cod from ng if</p>
+<p [hidden]="false">my cod from hidder</p>
+
+<div class="card" *ngFor="let data of sampleArray">
+    <p> My Content inside div for looping {{data}}</p>
+    <p>{{myNameFromTS}}</p>
+    <input type="text" [value]="data">
+</div>
