@@ -7,11 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
+  myNavBarActiveClass= "active";
+  myNavBarInActiveClass ="";
   constructor() { }
 
   ngOnInit(): void {
   }
   myFunction() {
     alert("hi");
+   }
+
+   ChangeActiveCSS()
+   {
+     alert("Change me");
+     //this.
    }
 }

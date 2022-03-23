@@ -2,10 +2,14 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <div class="topnav" id="myTopnav" [hidden] = "false">
-  <a href="#home" class="active">Home</a>
-  <a href="#news">News</a>
+  <a routerLink="/login" routerLinkActive="active" >Home</a>
+  <!-- <a href="#news">News</a>
   <a href="#contact">Contact</a>
-  <a *ngIf="true"  href="#about">About</a>
+  <a *ngIf="true"  href="#about">About</a> -->
+  <a routerLink="/login" routerLinkActive="active">Login</a>
+  <a routerLink="/signup" routerLinkActive="active" >Sign Up</a>
+  <a routerLink="/dummy"routerLinkActive="active" >Dummy</a>
+  <a routerLink="/pagination" routerLinkActive="active">List Users</a>
   <!-- <a href="javascript:void(0);"  (click)="myFunction()">
     Vasanth<i class="fa fa-bars">test</i>
   </a> -->
