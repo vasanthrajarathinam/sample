@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthGuard } from '../auth.guard';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -6,7 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
-  constructor() { }
+  constructor(private authClient:AuthGuard) {
+
+
+   }
   typeOfPassword = "password";
   passwordVariable = "";
   userNameVariabe = "Default"
@@ -26,6 +30,12 @@ export class LoginComponent implements OnInit {
     //alert("clearing contorls");
     this.passwordVariable = "";
     this.userNameVariabe = "";
+  }
+
+  LogMeIn() : void {
+    this.authClient.isAccess=true;
+    alert("login success");
+
   }
 
 }

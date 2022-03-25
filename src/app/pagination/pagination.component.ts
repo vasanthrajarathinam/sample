@@ -11,7 +11,7 @@ export class PaginationComponent implements OnInit {
   usersCollectionCollection:any;
   posts : any[] = [];
   
-  constructor(private myHttpClient: HttpClient) { }
+  constructor(private myHttpClient : HttpClient) { }
   ngOnInit(): void {
 
     var localVariable : number;
