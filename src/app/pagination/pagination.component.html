@@ -1,4 +1,4 @@
-<table >
+<table>
     <tr>
         <th scope="col">ID</th>
         <th>User ID</th>
@@ -6,7 +6,7 @@
         <th>body</th>
         <th></th>
     </tr>
-    <tr *ngFor="let post of posts">
+    <tr *ngFor="let post of filteredPosts">
         <td>{{post.id}}</td>
         <td>{{post.userId}}</td>
         <td>{{post.title}}</td>
@@ -14,9 +14,16 @@
         <td></td>
     </tr>
     <tr>
+        <!-- <td *ngFor="let item of createRange(5); let currentElementIndex=index+1"> -->
+
+        <!-- {{currentElementIndex}} Something -->
         <td>
 
-
+            <button (click)="displayPage(currentPageNumber - 1)">&lt; </button>
+            <button (click)="displayPage(1)">1</button>
+            <button (click)="displayPage(2)">2</button>
+            <button (click)="displayPage(3)">3</button>
+            <button (click)="displayPage(currentPageNumber + 1)">&gt; </button>
         </td>
     </tr>
 </table>
