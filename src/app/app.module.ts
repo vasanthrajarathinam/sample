@@ -10,6 +10,8 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { PaginationComponent } from './pagination/pagination.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule  } from '@angular/common/http';
+import { EmployeeListComponent } from './employee-list/employee-list.component';
+import { EmployeelistComponent } from './employeelist/employeelist.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { HttpClientModule  } from '@angular/common/http';
     SignupComponent,
     DummyComponent,
     NavbarComponent,
-    PaginationComponent
+    PaginationComponent,
+    EmployeeListComponent,
+    EmployeelistComponent
   ],
   imports: [
     BrowserModule,

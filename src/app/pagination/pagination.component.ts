@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { AnyForUntypedForms } from '@angular/forms';
+import { Post } from '../models/post.model';
 
 @Component({
   selector: 'app-pagination',
@@ -32,8 +33,6 @@ export class PaginationComponent implements OnInit {
         this.totalpages = Math.ceil(data.length / this.recordsPerPage);
         console.log(this.totalpages);
         console.log(this.recordsPerPage);
-
-
       }
     );
 
@@ -46,30 +45,4 @@ export class PaginationComponent implements OnInit {
     this.filteredPosts = this.posts.slice(start, end);
     console.log(this.filteredPosts);
   }
-
-  // PreviousPage()
-  // {
-  //   console.log(this.currentPageNumber);
-  //   if(this.currentPageNumber >= 2)
-  //   this.currentPageNumber--;
-  //   this.displayPage(this.currentPageNumber);
-
-  // }
-  // NextPage()
-  // {
-  //   console.log(this.currentPageNumber);
-  //   if(this.totalpages < this.currentPageNumber)
-  //   this.currentPageNumber++;
-  //   this.displayPage(this.currentPageNumber);
-  // }
-
-
-}
-
-interface Post {
-  id: number;
-  userId: number;
-  title: string;
-  body: string;
-  anotherProperty: string;
 }

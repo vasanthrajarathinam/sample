@@ -17,7 +17,9 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  validatePassword() {
+  validatePassword(f:any) {
+
+    console.log(f);
     if (this.typeOfPassword == "password") {
       this.typeOfPassword = "text";
     }
