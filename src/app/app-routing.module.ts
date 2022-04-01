@@ -13,7 +13,7 @@ const routes: Routes = [
   {path:'signup',component:SignupComponent},
   {path:'pagination',component:PaginationComponent, canActivate:[AuthGuard ]},
   {path:'dummy',component:DummyComponent, canActivate:[AuthGuard ]},
-  {path: 'employeelist',component:EmployeelistComponent},
+  {path: 'employeelist',component:EmployeeListComponent},
   {path: 'employee-list',component:EmployeelistComponent}
 ];
 

@@ -7,10 +7,11 @@
       </div>
     </div>
     <div class="login-form">
-      <input ngModel name="username" type="text" [value]="userNameVariabe" placeholder="username" />
+      <input ngModel name="username" required="true" minlength="3" maxlength="10" type="text" [value]="userNameVariabe" placeholder="username" />
+      <small   class="error" *ngIf="myform.form.controls['username']?.errors?.['required']">User name is Requried</small>
       <small *ngIf="myform.form.controls['username']?.touched"> user name is touched </small>
       <br/>
-      <small *ngIf="!myform.form.controls['username'].pristine">user name is pestined</small>
+      <small *ngIf="!myform.form.controls['username']?.pristine">user name is pestined</small>
       <input ngModel name= "password" [type]="typeOfPassword" [value]="passwordVariable" placeholder="password" />
       <!-- <p>{{userNameVariabe}}</p> -->
       <!-- <button (click)="ClearControls()">Clear</button> -->
