@@ -20,6 +20,7 @@ export class LoginComponent implements OnInit {
   validatePassword(f:any) {
 
     console.log(f);
+    console.log(f.form.value);
     if (this.typeOfPassword == "password") {
       this.typeOfPassword = "text";
     }

@@ -18,7 +18,8 @@ export class SignupComponent implements OnInit {
 
   signup (): void{
     alert('signup');
-    console.log(this.signupForm)
+    console.log(this.signupForm);
+    console.log(this.signupForm.value);
   }
 
 }
