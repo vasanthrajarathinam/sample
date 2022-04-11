@@ -1,1 +1,19 @@
-<p>employeelist works!</p>
+<!-- <tr *ngFor="let post of filteredPosts">
+  <td>{{post.id}}</td>
+  <td>{{post.userId}}</td>
+  <td>{{post.title}}</td>
+  <td>{{post.body}}</td>
+  <td></td>
+</tr> -->
+
+
+<div class="card" style="border: 4px;" *ngFor="let employee of employeeDetails">
+  <img src="emp.jpg" alt="John" style="width:100%">
+  <h1>{{employee.name}}</h1>
+  <p class="title"></p>
+  <p>{{employee.company.name}}</p>
+  <div style="margin: 24px 0;">
+
+  </div>
+  <p><button>Contact</button></p>
+</div>

@@ -76,3 +76,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+.error{
+  display:block;
+  color: red;
+}

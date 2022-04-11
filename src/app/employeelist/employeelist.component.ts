@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { AnyForUntypedForms } from '@angular/forms';
 
 @Component({
   selector: 'app-employeelist',
@@ -7,9 +9,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EmployeelistComponent implements OnInit {
 
-  constructor() { }
+  employeeDetails :any;
+
+  constructor(private myHttpClient: HttpClient) { }
 
   ngOnInit(): void {
+
+    this.myHttpClient.get('https://jsonplaceholder.typicode.com/users').subscribe(
+      (data: any) => {
+
+        console.log(data);
+        this.employeeDetails = data;
+
+      }
+    );
+
+
   }
 
 }

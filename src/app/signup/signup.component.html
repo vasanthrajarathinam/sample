@@ -1,15 +1,21 @@
 <div >
     <div class="form">
-      <form class="login-form">
-        <input type="text" placeholder="username"/>
-        <input type="password" placeholder="password"/>
+      <form class="login-form" [formGroup]="signupForm">
+        <input type="text" formControlName="username" placeholder="username"/>
+        <small   class="error" *ngIf="signupForm.controls['username']?.touched && signupForm.controls['username']?.errors?.['required']">User name is Requried</small>
+        <small   class="error" *ngIf="signupForm.controls['username']?.touched && signupForm.controls['username']?.errors?.['minlength']">User name should have min 3 char</small>
+        <small   class="error" *ngIf="signupForm.controls['username']?.touched && signupForm.controls['username']?.errors?.['maxlength']">User name should be less than 10 char</small>
+        <br/>
+        <small *ngIf="signupForm.controls['username']?.touched"> user name is touched </small>
+        <br/>
+        <small *ngIf="!signupForm.controls['username']?.pristine">user name is pestined</small>
+        <input type="password" formControlName="password" placeholder="password"/>
         <input type="password" placeholder="confirmedPassword"/>
         <input type="text" placeholder="First Name"/>
         <input type="text" placeholder="Last Name"/>
         <input type="text" placeholder="Email"/>
         <input type="text" placeholder="Phone number"/>
-        <button>sign-up</button>
-        
+        <button (click)="signup()">sign-up</button>
       </form>
     </div>
   </div>
