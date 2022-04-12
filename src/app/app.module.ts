@@ -12,6 +12,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule  } from '@angular/common/http';
 
 import { EmployeelistComponent } from './employeelist/employeelist.component';
+import { TrippledotPipe } from './trippledot.pipe';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { EmployeelistComponent } from './employeelist/employeelist.component';
     DummyComponent,
     NavbarComponent,
     PaginationComponent,
-    EmployeelistComponent
+    EmployeelistComponent,
+    TrippledotPipe
   ],
   imports: [
     BrowserModule,

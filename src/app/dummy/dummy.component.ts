@@ -1,3 +1,4 @@
+import { LowerCasePipe } from '@angular/common';
 import { Component, OnInit, AfterViewInit,AfterViewChecked, AfterContentInit,AfterContentChecked } from '@angular/core';
 
 @Component({
@@ -9,9 +10,10 @@ export class DummyComponent implements OnInit, AfterViewInit,AfterViewChecked, A
   typeOfText = 'text';
   newTypeOfValue="text";
   textValueFromModel = "hi this is from model";
+  sampleDateText = new Date();
   sampleArray = [5,10,15,20,600];
   myNameFromTS="vasanth from ts";
-  constructor() { 
+  constructor() {
     console.log("constructor");
   }
 
@@ -33,15 +35,15 @@ export class DummyComponent implements OnInit, AfterViewInit,AfterViewChecked, A
   }
   ngAfterViewChecked(): void {
     console.log("ngAfterViewChecked");
-      
+
   }
 
   ngAfterContentInit(): void {
     console.log("ngAfterContentInit");
-      
+
   }
   ngAfterContentChecked(): void {
     console.log("ngAfterContentChecked");
-      
+
   }
 }
