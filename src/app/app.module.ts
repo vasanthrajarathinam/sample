@@ -13,6 +13,7 @@ import { HttpClientModule  } from '@angular/common/http';
 
 import { EmployeelistComponent } from './employeelist/employeelist.component';
 import { TrippledotPipe } from './trippledot.pipe';
+import { EmployeedetailsComponent } from './employeedetails/employeedetails.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { TrippledotPipe } from './trippledot.pipe';
     NavbarComponent,
     PaginationComponent,
     EmployeelistComponent,
-    TrippledotPipe
+    TrippledotPipe,
+    EmployeedetailsComponent
   ],
   imports: [
     BrowserModule,

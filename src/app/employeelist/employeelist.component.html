@@ -7,13 +7,14 @@
 </tr> -->
 
 
-<div class="card" style="border: 4px;" *ngFor="let employee of employeeDetails">
+<div class="card" style="border: 4px;" *ngFor="let employee of employeeArray ; index as i" >
   <img src="assets/emp.jpg"  alt="John" style="width:50%;height:50%">
-  <h1>{{employee.name}}</h1>
+  <h1>{{employee.Name}}</h1>
   <p class="title"></p>
-  <p>{{employee.company.name}}</p>
+  <p>{{employee.Age}}</p>
+  <p class="title"></p>
+  <p>{{employee.City}}</p>
   <div style="margin: 24px 0;">
-
   </div>
-  <p><button>Contact</button></p>
+  <p><button  routerLink="/employeedetails" (click)="view(i)">Contact</button></p>
 </div>
