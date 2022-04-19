@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { AnyForUntypedForms } from '@angular/forms';
+import { ApiService } from '../api.service';
 import { Post } from '../models/post.model';
 
 @Component({
@@ -15,14 +16,15 @@ export class PaginationComponent implements OnInit {
   totalpages: number = 0;
   recordsPerPage: number = 10;
   currentPageNumber: number = 1;
-  constructor(private myHttpClient: HttpClient) { }
+  constructor(private myHttpClient: HttpClient, private api:ApiService) { }
   ngOnInit(): void {
 
     var localVariable: number;
 
     localVariable = 1;
 
-    this.myHttpClient.get('https://jsonplaceholder.typicode.com/posts').subscribe(
+    //this.myHttpClient.get('https://jsonplaceholder.typicode.com/posts').subscribe(
+    this.api.get('posts').subscribe(
       (data: any) => {
         this.posts = data;
 

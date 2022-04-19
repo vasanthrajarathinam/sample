@@ -14,7 +14,7 @@ export class EmployeelistComponent implements OnInit {
   employeeDetails :any;
 
   employeeArray :Employeemodel[];
-  
+
   constructor(private myHttpClient: HttpClient, private emp : EmployeeService) {
     this.employeeArray = emp.employeeArray
 
@@ -33,8 +33,11 @@ export class EmployeelistComponent implements OnInit {
   }
 
   view(index:number){
-    alert(index);
+
     console.log(this.employeeArray[index]);
+    this.emp.selectedEmployee = index;
+    //alert(index);
+
   }
 
 }

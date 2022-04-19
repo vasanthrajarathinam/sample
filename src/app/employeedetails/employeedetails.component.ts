@@ -13,7 +13,8 @@ export class EmployeedetailsComponent implements OnInit {
   employee : Employeemodel;
 
   constructor( private empService: EmployeeService) {
-     this.employee=empService.employeeArray[2];
+     //this.employee=empService.employeeArray[2];
+    this.employee = empService.getEmployee();
   }
 
   ngOnInit(): void {

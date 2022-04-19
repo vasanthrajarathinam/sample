@@ -1408,8 +1408,13 @@ export class EmployeeService {
       "EmployeeID": 200
     }
   ];
-
-
+  selectedEmployee = -1;
 
   constructor() { }
+  getEmployee() : Employeemodel{
+    return this.employeeArray[this.selectedEmployee];
+  }
+
+  
+
 }
