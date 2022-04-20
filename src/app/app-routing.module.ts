@@ -9,17 +9,21 @@ import { PaginationComponent } from './pagination/pagination.component';
 import { SignupComponent } from './signup/signup.component';
 
 const routes: Routes = [
-  {path:'login',component:LoginComponent},
-  {path:'signup',component:SignupComponent},
-  {path:'pagination',component:PaginationComponent, canActivate:[AuthGuard ]},
-  {path:'dummy',component:DummyComponent, canActivate:[AuthGuard ]},
-  {path: 'employeelist',component:EmployeelistComponent},
-  {path: 'employeedetails',component:EmployeedetailsComponent},
-
+  { path: 'login', component: LoginComponent },
+  { path: 'signup', component: SignupComponent },
+  {
+    path: 'pagination',
+    component: PaginationComponent,
+    canActivate: [AuthGuard],
+  },
+  { path: 'dummy', component: DummyComponent, canActivate: [AuthGuard] },
+  { path: 'employeelist', component: EmployeelistComponent },
+  { path: 'employeedetails', component: EmployeedetailsComponent },
+  { path: 'employee', loadChildren: () => import('./employee/employee.module').then(m => m.EmployeeModule) },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
