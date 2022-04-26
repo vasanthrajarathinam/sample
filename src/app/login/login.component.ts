@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthGuard } from '../auth.guard';
+import Swal from 'sweetalert2'
+
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -19,6 +22,13 @@ export class LoginComponent implements OnInit {
 
   validatePassword(f:any) {
 
+    Swal.fire({
+      title: 'Error!',
+      text: 'Do you want to continue',
+      icon: 'error',
+      confirmButtonText: 'Cool'
+    })
+    
     console.log(f);
     console.log(f.form.value);
     if (this.typeOfPassword == "password") {
@@ -37,7 +47,9 @@ export class LoginComponent implements OnInit {
 
   LogMeIn() : void {
     this.authClient.isAccess=true;
-    alert("login success");
+    //alert("login success");
+
+   
 
   }
 
